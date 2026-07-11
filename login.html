@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Login — HomeChef</title>
+<meta name="description" content="Sign in to your HomeChef account."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/><link rel="stylesheet" href="css/login.css"/>
+</head><body>
+<div id="nav-slot"></div>
+
+<div class="auth-wrap">
+  <div class="auth-visual"><div class="inner reveal"><h2>Welcome back</h2><p>Sign in to reorder your favourites, track deliveries, and unlock member-only offers.</p></div></div>
+  <div class="auth-form">
+    <div class="auth-card reveal">
+      <h1>Sign in</h1>
+      <p class="sub">Good to see you again 👋</p>
+      <form id="loginForm" novalidate>
+        <div class="field"><label for="l-email">Email</label><input id="l-email" name="email" type="email" placeholder="you@example.com" required autocomplete="email"/></div>
+        <div class="field"><label for="l-pw">Password</label>
+          <div class="pw-wrap">
+            <input id="l-pw" name="password" type="password" placeholder="Your password" required autocomplete="current-password"/>
+            <button type="button" class="pw-toggle" aria-label="Toggle password">👁</button>
+          </div>
+        </div>
+        <div class="row">
+          <label><input type="checkbox" id="l-remember"/> Remember me</label>
+          <a href="#">Forgot password?</a>
+        </div>
+        <button class="btn" type="submit" style="width:100%;justify-content:center">Sign in</button>
+      </form>
+      <p class="auth-foot">New to HomeChef? <a href="register.html">Create an account</a></p>
+    </div>
+  </div>
+</div>
+
+<div id="footer-slot"></div>
+<script src="js/includes.js"></script><script src="js/cart.js"></script><script src="js/main.js"></script>
+<script src="js/validation.js"></script><script src="js/login.js"></script>
+</body></html>

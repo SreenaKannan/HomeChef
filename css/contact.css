@@ -1,0 +1,22 @@
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:2rem}
+@media (max-width:820px){.contact-grid{grid-template-columns:1fr}}
+.info-card,.form-card{background:var(--card);padding:2rem;border-radius:var(--r);border:1px solid var(--border);box-shadow:var(--shadow-sm)}
+.info-item{display:flex;gap:1rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid var(--border)}
+.info-item:last-child{border-bottom:none}
+.info-item .ic{width:44px;height:44px;border-radius:12px;background:var(--cream);color:var(--orange);display:grid;place-items:center;flex-shrink:0}
+.info-item b{display:block;color:var(--brown);margin-bottom:.15rem}
+.info-item span{color:var(--muted);font-size:.9rem}
+.field{margin-bottom:1rem}
+.field label{display:block;font-size:.85rem;font-weight:600;color:var(--brown);margin-bottom:.4rem}
+.field input,.field textarea,.field select{
+  width:100%;padding:.85rem 1rem;border-radius:12px;border:1.5px solid var(--border);
+  background:var(--bg);color:var(--brown);font-family:inherit;font-size:.95rem;outline:none;
+  transition:border-color .2s,box-shadow .2s;
+}
+.field textarea{min-height:120px;resize:vertical}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--orange);box-shadow:0 0 0 4px rgba(255,122,26,.15)}
+.field input.invalid,.field textarea.invalid{border-color:#d63b3b}
+.field .err{color:#d63b3b;font-size:.8rem;margin-top:.35rem;min-height:1em}
+.map{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid var(--border);height:340px;background:var(--cream);display:grid;place-items:center;color:var(--muted);position:relative}
+.map iframe{width:100%;height:100%;border:0;display:block}

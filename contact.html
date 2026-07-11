@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Contact — HomeChef</title>
+<meta name="description" content="Get in touch with HomeChef — address, phone, email and contact form."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/><link rel="stylesheet" href="css/contact.css"/>
+</head><body>
+<div id="nav-slot"></div>
+
+<section class="page-hero"><div class="container"><h1>Get in Touch</h1><p class="crumbs"><a href="index.html">Home</a> / Contact</p></div></section>
+
+<section><div class="container">
+  <div class="contact-grid">
+    <div class="reveal left">
+      <div class="info-card">
+        <h3 style="margin-top:0">Contact information</h3>
+        <div class="info-item"><div class="ic">📍</div><div><b>Address</b><span>221 Baker Street, London, UK</span></div></div>
+        <div class="info-item"><div class="ic">📞</div><div><b>Phone</b><span>+44 20 7946 0000</span></div></div>
+        <div class="info-item"><div class="ic">✉️</div><div><b>Email</b><span>hello@homechef.com</span></div></div>
+        <div class="info-item"><div class="ic">🕒</div><div><b>Hours</b><span>Mon–Sun · 8am to 11pm</span></div></div>
+      </div>
+      <div class="map" style="margin-top:1.5rem">
+        <iframe title="Map" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.161%2C51.522%2C-0.153%2C51.526&layer=mapnik"></iframe>
+      </div>
+    </div>
+
+    <form class="form-card reveal right" id="contactForm" novalidate>
+      <h3 style="margin-top:0">Send us a message</h3>
+      <div class="field"><label for="c-name">Full Name</label><input id="c-name" name="name" type="text" placeholder="Jane Doe" required/></div>
+      <div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" placeholder="you@example.com" required/></div>
+      <div class="field"><label for="c-phone">Phone</label><input id="c-phone" name="phone" type="tel" placeholder="+44 20 7946 0000" required/></div>
+      <div class="field"><label for="c-subject">Subject</label><input id="c-subject" name="subject" type="text" placeholder="How can we help?" required/></div>
+      <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" name="message" placeholder="Tell us more…" required></textarea></div>
+      <button class="btn" type="submit" style="width:100%;justify-content:center">Send Message</button>
+    </form>
+  </div>
+</div></section>
+
+<div id="footer-slot"></div>
+<script src="js/includes.js"></script><script src="js/cart.js"></script><script src="js/main.js"></script>
+<script src="js/validation.js"></script>
+<script>
+(function(){
+  const f = document.getElementById('contactForm');
+  f.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    const V = window.HCV;
+    const name = f.name, email = f.email, phone = f.phone, subject = f.subject, message = f.message;
+    let ok = true;
+    if(!V.required(name.value)){V.showError(name,'Please enter your name');ok=false;} else V.showError(name,'');
+    if(!V.email(email.value)){V.showError(email,'Enter a valid email');ok=false;} else V.showError(email,'');
+    if(!V.phone(phone.value)){V.showError(phone,'Enter a valid phone number');ok=false;} else V.showError(phone,'');
+    if(!V.required(subject.value)){V.showError(subject,'Add a subject');ok=false;} else V.showError(subject,'');
+    if(!V.minLen(message.value,10)){V.showError(message,'Message should be at least 10 characters');ok=false;} else V.showError(message,'');
+    if(!ok){window.toast('Please fix the errors','error');return;}
+    f.reset();window.toast('Message sent! We\'ll be in touch soon.');
+  });
+})();
+</script>
+</body></html>

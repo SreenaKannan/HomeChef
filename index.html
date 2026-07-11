@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HomeChef — Fresh Meals, Delivered with Love</title>
+<meta name="description" content="HomeChef delivers fresh, chef-crafted meals to your door. Order from expert chefs and enjoy healthy, delicious food anytime." />
+<link rel="icon" href="/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<!-- NAV -->
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="logo"><span class="logo-mark">H</span> Home<span>Chef</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="chefs.html">Chefs</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html" class="reg-link" style="color:var(--orange);font-weight:600">Register</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme"></button>
+      <a href="cart.html" class="icon-btn" aria-label="Cart">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="reveal left">
+      <span class="hero-eyebrow">🍴 Fresh · Fast · Chef-crafted</span>
+      <h1>Delicious meals, made with <span>love</span> — delivered fresh.</h1>
+      <p>Restaurant-quality dishes prepared by expert chefs using seasonal ingredients. From breakfast to late-night cravings — we've got you covered.</p>
+      <div class="hero-actions">
+        <a href="menu.html" class="btn">Order Now
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="menu.html" class="btn btn-ghost">Explore Menu</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>50k+</b><span>Happy customers</span></div>
+        <div class="stat"><b>120+</b><span>Signature dishes</span></div>
+        <div class="stat"><b>4.9★</b><span>Average rating</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal right">
+      <div class="plate"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=900&auto=format&fit=crop" alt="Signature bowl"/></div>
+      <div class="chip c1"><div class="dot">⚡</div><div><div>Fast Delivery</div><small style="color:var(--muted);font-weight:400">Under 30 min</small></div></div>
+      <div class="chip c2"><div class="dot">🌿</div><div><div>100% Organic</div><small style="color:var(--muted);font-weight:400">Fresh ingredients</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why choose us</span>
+      <h2>Everything you love about great food</h2>
+      <p>We obsess over every detail — from ingredient sourcing to the moment it arrives at your door.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature reveal"><div class="ficon">🥬</div><h3>Fresh Ingredients</h3><p>Sourced daily from local farms and trusted suppliers.</p></div>
+      <div class="feature reveal"><div class="ficon">⚡</div><h3>Fast Delivery</h3><p>Piping-hot meals at your door in 30 minutes or less.</p></div>
+      <div class="feature reveal"><div class="ficon">👨‍🍳</div><h3>Expert Chefs</h3><p>Every dish is crafted by award-winning professional chefs.</p></div>
+      <div class="feature reveal"><div class="ficon">💚</div><h3>Healthy Meals</h3><p>Balanced, nutritious recipes for every lifestyle and diet.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Popular categories</span>
+      <h2>Browse by what you're craving</h2>
+    </div>
+    <div class="cat-grid">
+      <a href="menu.html" class="cat reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=600&auto=format&fit=crop" alt="Breakfast"/><span>28 dishes</span><h3>Breakfast</h3></a>
+      <a href="menu.html" class="cat reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop" alt="Lunch"/><span>42 dishes</span><h3>Lunch</h3></a>
+      <a href="menu.html" class="cat reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&auto=format&fit=crop" alt="Dinner"/><span>36 dishes</span><h3>Dinner</h3></a>
+      <a href="menu.html" class="cat reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&auto=format&fit=crop" alt="Desserts"/><span>19 dishes</span><h3>Desserts</h3></a>
+      <a href="menu.html" class="cat reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&auto=format&fit=crop" alt="Drinks"/><span>24 drinks</span><h3>Drinks</h3></a>
+    </div>
+  </div>
+</section>
+
+<!-- POPULAR DISHES -->
+<section style="background:var(--cream)">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Trending now</span>
+      <h2>Our most-loved dishes</h2>
+      <p>Handpicked favourites from thousands of orders this week.</p>
+    </div>
+    <div class="dish-grid">
+      <article class="dish reveal" data-item data-id="d1" data-name="Truffle Mushroom Risotto" data-price="18.5" data-image="https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=600&auto=format&fit=crop">
+        <div class="thumb"><span class="tag">Chef's pick</span><button class="fav">♡</button><img loading="lazy" src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=600&auto=format&fit=crop" alt="Truffle risotto"/></div>
+        <div class="dish-body"><h3>Truffle Mushroom Risotto</h3><p class="desc">Creamy arborio rice with wild mushrooms and shaved black truffle.</p><div class="dish-meta"><span class="rating"><span class="star">★</span> 4.9 <span style="color:var(--muted);font-weight:400">(210)</span></span><span class="price">$18.50</span></div></div>
+        <div class="dish-actions">
+          <div class="qty"><button data-qty-dec>−</button><span>1</span><button data-qty-inc>+</button></div>
+          <button class="btn" data-add-to-cart>Add to Cart</button>
+        </div>
+      </article>
+      <article class="dish reveal" data-item data-id="d2" data-name="Grilled Salmon Bowl" data-price="21.0" data-image="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&auto=format&fit=crop">
+        <div class="thumb"><span class="tag">Healthy</span><button class="fav">♡</button><img loading="lazy" src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&auto=format&fit=crop" alt="Salmon bowl"/></div>
+        <div class="dish-body"><h3>Grilled Salmon Bowl</h3><p class="desc">Atlantic salmon, quinoa, roasted veg and lemon-tahini dressing.</p><div class="dish-meta"><span class="rating"><span class="star">★</span> 4.8 <span style="color:var(--muted);font-weight:400">(186)</span></span><span class="price">$21.00</span></div></div>
+        <div class="dish-actions"><div class="qty"><button data-qty-dec>−</button><span>1</span><button data-qty-inc>+</button></div><button class="btn" data-add-to-cart>Add to Cart</button></div>
+      </article>
+      <article class="dish reveal" data-item data-id="d3" data-name="Neapolitan Margherita" data-price="14.0" data-image="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=600&auto=format&fit=crop">
+        <div class="thumb"><span class="tag">Popular</span><button class="fav">♡</button><img loading="lazy" src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=600&auto=format&fit=crop" alt="Margherita pizza"/></div>
+        <div class="dish-body"><h3>Neapolitan Margherita</h3><p class="desc">Wood-fired pizza with San Marzano tomato and buffalo mozzarella.</p><div class="dish-meta"><span class="rating"><span class="star">★</span> 4.7 <span style="color:var(--muted);font-weight:400">(342)</span></span><span class="price">$14.00</span></div></div>
+        <div class="dish-actions"><div class="qty"><button data-qty-dec>−</button><span>1</span><button data-qty-inc>+</button></div><button class="btn" data-add-to-cart>Add to Cart</button></div>
+      </article>
+      <article class="dish reveal" data-item data-id="d4" data-name="Beef Ramen" data-price="16.5" data-image="https://images.unsplash.com/photo-1591814468924-caf88d1232e1?w=600&auto=format&fit=crop">
+        <div class="thumb"><span class="tag">Spicy</span><button class="fav">♡</button><img loading="lazy" src="https://images.unsplash.com/photo-1591814468924-caf88d1232e1?w=600&auto=format&fit=crop" alt="Ramen"/></div>
+        <div class="dish-body"><h3>Slow-Braised Beef Ramen</h3><p class="desc">Rich tonkotsu broth, hand-pulled noodles, soft egg and scallion.</p><div class="dish-meta"><span class="rating"><span class="star">★</span> 4.9 <span style="color:var(--muted);font-weight:400">(198)</span></span><span class="price">$16.50</span></div></div>
+        <div class="dish-actions"><div class="qty"><button data-qty-dec>−</button><span>1</span><button data-qty-inc>+</button></div><button class="btn" data-add-to-cart>Add to Cart</button></div>
+      </article>
+      <article class="dish reveal" data-item data-id="d5" data-name="Avocado Toast" data-price="11.0" data-image="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=600&auto=format&fit=crop">
+        <div class="thumb"><span class="tag">Vegan</span><button class="fav">♡</button><img loading="lazy" src="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=600&auto=format&fit=crop" alt="Avocado toast"/></div>
+        <div class="dish-body"><h3>Avocado Toast</h3><p class="desc">Sourdough, smashed avocado, chilli flakes, radish and lime.</p><div class="dish-meta"><span class="rating"><span class="star">★</span> 4.6 <span style="color:var(--muted);font-weight:400">(129)</span></span><span class="price">$11.00</span></div></div>
+        <div class="dish-actions"><div class="qty"><button data-qty-dec>−</button><span>1</span><button data-qty-inc>+</button></div><button class="btn" data-add-to-cart>Add to Cart</button></div>
+      </article>
+      <article class="dish reveal" data-item data-id="d6" data-name="Chocolate Lava Cake" data-price="9.5" data-image="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&auto=format&fit=crop">
+        <div class="thumb"><span class="tag">Sweet</span><button class="fav">♡</button><img loading="lazy" src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&auto=format&fit=crop" alt="Lava cake"/></div>
+        <div class="dish-body"><h3>Chocolate Lava Cake</h3><p class="desc">Molten dark chocolate centre with vanilla bean ice cream.</p><div class="dish-meta"><span class="rating"><span class="star">★</span> 4.9 <span style="color:var(--muted);font-weight:400">(264)</span></span><span class="price">$9.50</span></div></div>
+        <div class="dish-actions"><div class="qty"><button data-qty-dec>−</button><span>1</span><button data-qty-inc>+</button></div><button class="btn" data-add-to-cart>Add to Cart</button></div>
+      </article>
+    </div>
+    <div class="text-center mt-2"><a href="menu.html" class="btn btn-ghost">View Full Menu →</a></div>
+  </div>
+</section>
+
+<!-- CHEFS -->
+<section class="chefs">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Meet the team</span>
+      <h2>Chefs behind the magic</h2>
+    </div>
+    <div class="chef-grid">
+      <div class="chef reveal"><div class="photo"><img loading="lazy" src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?w=500&auto=format&fit=crop" alt="Chef Marco"/><div class="socials"><a href="#">𝕏</a><a href="#">ⓘ</a><a href="#">f</a></div></div><div class="chef-body"><h3>Marco Rossi</h3><p class="role">Italian Cuisine</p><p class="exp">12 years · ★ 4.9</p></div></div>
+      <div class="chef reveal"><div class="photo"><img loading="lazy" src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=500&auto=format&fit=crop" alt="Chef Aiko"/><div class="socials"><a href="#">𝕏</a><a href="#">ⓘ</a><a href="#">f</a></div></div><div class="chef-body"><h3>Aiko Tanaka</h3><p class="role">Japanese Cuisine</p><p class="exp">10 years · ★ 4.8</p></div></div>
+      <div class="chef reveal"><div class="photo"><img loading="lazy" src="https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=500&auto=format&fit=crop" alt="Chef Sofia"/><div class="socials"><a href="#">𝕏</a><a href="#">ⓘ</a><a href="#">f</a></div></div><div class="chef-body"><h3>Sofia Martinez</h3><p class="role">Pastry & Desserts</p><p class="exp">8 years · ★ 4.9</p></div></div>
+      <div class="chef reveal"><div class="photo"><img loading="lazy" src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=500&auto=format&fit=crop" alt="Chef Daniel"/><div class="socials"><a href="#">𝕏</a><a href="#">ⓘ</a><a href="#">f</a></div></div><div class="chef-body"><h3>Daniel Kim</h3><p class="role">Grill & BBQ</p><p class="exp">15 years · ★ 4.9</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Testimonials</span>
+      <h2>Loved by food lovers</h2>
+    </div>
+    <div class="slider" data-slider>
+      <div class="slides">
+        <div class="slide"><div class="tcard"><div class="avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&auto=format&fit=crop" alt=""/></div><blockquote>“Every meal feels like it came straight from my favourite bistro. The truffle risotto is unreal.”</blockquote><div class="name">Amelia Carter</div><div class="role">Food blogger</div></div></div>
+        <div class="slide"><div class="tcard"><div class="avatar"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&auto=format&fit=crop" alt=""/></div><blockquote>“Fast, hot and consistently delicious. HomeChef is our weekly ritual now.”</blockquote><div class="name">James Miller</div><div class="role">Software engineer</div></div></div>
+        <div class="slide"><div class="tcard"><div class="avatar"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&auto=format&fit=crop" alt=""/></div><blockquote>“The chefs clearly care. Ingredients taste fresh and the portions are generous.”</blockquote><div class="name">Priya Sharma</div><div class="role">Nutritionist</div></div></div>
+      </div>
+      <div class="slider-arrows"><button data-prev aria-label="Previous">‹</button><button data-next aria-label="Next">›</button></div>
+      <div class="slider-nav"></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="container">
+    <div class="reveal">
+      <h2>Get weekly recipes & offers</h2>
+      <p>Subscribe to our newsletter and enjoy 10% off your first order.</p>
+      <form class="newsletter-form"><input type="email" placeholder="Your email address" required/><button type="submit">Subscribe</button></form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="brand">
+        <a href="index.html" class="logo"><span class="logo-mark">H</span> Home<span style="color:var(--orange-soft)">Chef</span></a>
+        <p>Restaurant-quality meals delivered with love. Made by chefs, for food lovers.</p>
+        <div class="social-row"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">ⓘ</a><a href="#" aria-label="Twitter">𝕏</a><a href="#" aria-label="YouTube">▶</a></div>
+      </div>
+      <div><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="chefs.html">Chefs</a></li></ul></div>
+      <div><h4>Support</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="#">FAQ</a></li><li><a href="#">Delivery</a></li><li><a href="#">Terms</a></li><li><a href="#">Privacy</a></li></ul></div>
+      <div>
+        <h4>Contact</h4>
+        <div class="contact-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>221 Baker Street, London, UK</span></div>
+        <div class="contact-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.98.37 1.94.7 2.86a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.22-1.22a2 2 0 0 1 2.11-.45c.92.33 1.88.57 2.86.7A2 2 0 0 1 22 16.92z"/></svg><span>+44 20 7946 0000</span></div>
+        <div class="contact-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@homechef.com</span></div>
+      </div>
+    </div>
+    <div class="copyright">© <span id="yr"></span> HomeChef. All rights reserved. Made with ♥ for food lovers.</div>
+  </div>
+</footer>
+
+<button id="scrollTop" class="scroll-top" aria-label="Scroll to top">↑</button>
+<script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

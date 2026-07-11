@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Cart — HomeChef</title>
+<meta name="description" content="Review your HomeChef order and check out."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/><link rel="stylesheet" href="css/cart.css"/>
+</head><body>
+<div id="nav-slot"></div>
+
+<section class="page-hero"><div class="container"><h1>Your Cart</h1><p class="crumbs"><a href="index.html">Home</a> / Cart</p></div></section>
+
+<section><div class="container">
+  <div id="cartView"></div>
+</div></section>
+
+<div id="footer-slot"></div>
+<script src="js/includes.js"></script><script src="js/cart.js"></script><script src="js/main.js"></script>
+<script>
+(function(){
+  const view = document.getElementById('cartView');
+  const fmt = n => '$'+n.toFixed(2);
+  const render = ()=>{
+    const items = Cart.items();
+    if(items.length===0){
+      view.innerHTML = `<div class="empty">
+        <div class="emoji">🛒</div>
+        <h2>Your cart is empty</h2>
+        <p>Looks like you haven't added anything yet. Let's fix that.</p>
+        <a href="menu.html" class="btn">Browse Menu</a>
+      </div>`;
+      return;
+    }
+    const rows = items.map(i=>`
+      <div class="cart-row" data-id="${i.id}">
+        <img src="${i.image||''}" alt="${i.name}"/>
+        <div><h3>${i.name}</h3><span style="color:var(--muted);font-size:.88rem">${fmt(i.price)} each</span></div>
+        <div class="qty"><button data-dec>−</button><span>${i.qty}</span><button data-inc>+</button></div>
+        <div class="price">${fmt(i.price*i.qty)}</div>
+        <button class="rm" data-rm aria-label="Remove">✕</button>
+      </div>`).join('');
+    const sub = Cart.subtotal();
+    const delivery = sub>0 ? (sub>40?0:3.5) : 0;
+    const total = sub + delivery;
+    view.innerHTML = `<div class="cart-wrap">
+      <div class="cart-list">${rows}</div>
+      <aside class="cart-summary">
+        <h3 style="margin-top:0">Order Summary</h3>
+        <div class="sum-row"><span>Subtotal</span><span>${fmt(sub)}</span></div>
+        <div class="sum-row"><span>Delivery</span><span>${delivery===0?'Free':fmt(delivery)}</span></div>
+        <div class="sum-row total"><span>Total</span><span>${fmt(total)}</span></div>
+        <button class="btn" id="checkout" style="width:100%;justify-content:center;margin-top:1rem">Checkout</button>
+        <a href="menu.html" class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:.5rem">Add more items</a>
+      </aside>
+    </div>`;
+    view.querySelectorAll('.cart-row').forEach(row=>{
+      const id = row.dataset.id;
+      row.querySelector('[data-inc]').addEventListener('click',()=>Cart.inc(id));
+      row.querySelector('[data-dec]').addEventListener('click',()=>Cart.dec(id));
+      row.querySelector('[data-rm]').addEventListener('click',()=>{Cart.remove(id);window.toast('Item removed');});
+    });
+    document.getElementById('checkout').addEventListener('click',()=>{
+      Cart.clear();window.toast('Order placed! 🎉 Thanks for choosing HomeChef.');
+    });
+  };
+  window.addEventListener('cart:change',render);
+  render();
+})();
+</script>
+</body></html>

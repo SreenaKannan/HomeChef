@@ -1,0 +1,11 @@
+/* Services */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+.svc{background:var(--card);padding:2rem;border-radius:var(--r);border:1px solid var(--border);transition:transform .35s var(--ease),box-shadow .35s;position:relative;overflow:hidden}
+.svc::before{content:"";position:absolute;top:-40%;right:-40%;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,122,26,.12),transparent 70%);transition:transform .5s}
+.svc:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.svc:hover::before{transform:scale(1.4)}
+.svc .ficon{width:64px;height:64px;border-radius:20px;background:linear-gradient(135deg,var(--orange),var(--orange-deep));color:#fff;display:grid;place-items:center;font-size:1.6rem;margin-bottom:1.25rem;box-shadow:0 8px 20px rgba(232,91,0,.35);position:relative}
+.svc h3{margin-bottom:.5rem;position:relative}
+.svc p{position:relative;margin-bottom:1.25rem}
+.svc a{position:relative;color:var(--orange);font-weight:600;font-size:.9rem;display:inline-flex;align-items:center;gap:.35rem;transition:gap .25s}
+.svc a:hover{gap:.7rem}

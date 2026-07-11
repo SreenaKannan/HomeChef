@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Create account — HomeChef</title>
+<meta name="description" content="Create a HomeChef account and start ordering chef-crafted meals."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/><link rel="stylesheet" href="css/register.css"/>
+</head><body>
+<div id="nav-slot"></div>
+
+<div class="auth-wrap">
+  <div class="auth-visual"><div class="inner reveal"><h2>Join HomeChef</h2><p>Get 10% off your first order and access exclusive member perks.</p></div></div>
+  <div class="auth-form">
+    <div class="auth-card reveal">
+      <h1>Create your account</h1>
+      <p class="sub">It only takes a minute.</p>
+      <form id="registerForm" novalidate>
+        <div class="field"><label for="r-name">Full Name</label><input id="r-name" name="name" type="text" required autocomplete="name"/></div>
+        <div class="field"><label for="r-email">Email</label><input id="r-email" name="email" type="email" required autocomplete="email"/></div>
+        <div class="field"><label for="r-phone">Phone Number</label><input id="r-phone" name="phone" type="tel" required autocomplete="tel"/></div>
+        <div class="field"><label for="r-addr">Address</label><input id="r-addr" name="address" type="text" required autocomplete="street-address"/></div>
+        <div class="field"><label for="r-pw">Password</label>
+          <div class="pw-wrap">
+            <input id="r-pw" name="password" type="password" required autocomplete="new-password"/>
+            <button type="button" class="pw-toggle" aria-label="Toggle password">👁</button>
+          </div>
+          <div class="pw-meter" id="pwMeter" data-score="0"><i></i></div>
+          <div class="pw-hint" id="pwHint">Use 8+ characters with a mix of letters, numbers and symbols</div>
+        </div>
+        <div class="field"><label for="r-pw2">Confirm Password</label>
+          <div class="pw-wrap">
+            <input id="r-pw2" name="password2" type="password" required autocomplete="new-password"/>
+          </div>
+        </div>
+        <button class="btn" type="submit" style="width:100%;justify-content:center;margin-top:.5rem">Create account</button>
+      </form>
+      <p class="auth-foot">Already have an account? <a href="login.html">Sign in</a></p>
+    </div>
+  </div>
+</div>
+
+<div id="footer-slot"></div>
+<script src="js/includes.js"></script><script src="js/cart.js"></script><script src="js/main.js"></script>
+<script src="js/validation.js"></script><script src="js/register.js"></script>
+</body></html>
