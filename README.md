@@ -58,12 +58,4 @@ git clone https://github.com/SreenaKannan/HomeChef.git
 
 2. Open `index.html` in your browser.
 
----
 
-## 👩‍💻 Developer
-
-**Sreena Kannan**
-
-Final-Year Computer Science and Business Systems Student
-
-Java Full Stack Developer
